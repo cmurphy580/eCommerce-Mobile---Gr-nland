@@ -654,8 +654,8 @@ section.main-page {
 .profile-pic {
 	background-image: url('person pic.jpg');
 	background-size: cover;
-	height: 16vh;
-	width: 24vw;
+	height: 150px;
+	width: 150px;
 	border-radius: 50%;
 	align-self: center;
 	margin: 10px 0 10px 0;
