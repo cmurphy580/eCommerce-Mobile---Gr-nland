@@ -31,8 +31,7 @@ body {
 	color: rgba(255,255,255,1.0);
 	font-family: sans-serif;
 	background-color: rgba(0,0,0,0.3);
-	height: 20px;
-	z-index: 4;
+	z-index: 3;
 	position: fixed;
 }
 .left-header {
@@ -150,7 +149,7 @@ section.load-screen {
 	display: inline-block;
 	width: 5em;
 	height: 5em;
-	margin: 150px .5em 0 0;
+	margin: 150px .5em 50px 0;
 	font-size: 6px;
 	/*text-indent: 999em;*/
 	overflow: hidden;
@@ -219,8 +218,8 @@ section.main-page {
 	left: 0;
 	width: 100%;
 	display: none;
-	/*grid-template: [hero] 90vh [black-bar] 10vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr;*/
-	grid-template: [hero] 500px [black-bar] 50px [recommendations] auto [other-products] 200px [trips] 200px [footer] 50px / 1fr;
+	grid-template: [hero] 90vh [black-bar] 10vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr;
+	/*grid-template: [hero] 500px [black-bar] 50px [recommendations] auto [other-products] 200px [trips] 200px [footer] 50px / 1fr;*/
 	font-family: 'Rubik', sans-serif;
 	z-index: -1;
 }
@@ -308,7 +307,7 @@ section.main-page {
 	        box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.75);
 }
 .black-header {
-	background-color: rgba(0,0,0,255);
+	background-color: rgba(0,0,0,1.0);
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -324,8 +323,9 @@ section.main-page {
 	    -ms-flex-align: center;
 	        align-items: center;
 	font-family: 'Merriweather', serif;
-	z-index: 3;
+	z-index: 4;
 	overflow: hidden;
+	min-height: 50px;
 }
 .black-header h2 {
 	font-size: 20px;
@@ -471,13 +471,15 @@ section.main-page {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 100px;
 	background-color: rgba(255,255,255,1.0);
 }
 .for-heart {
 	z-index: 1;
 	-ms-flex-item-align: start;
 	    align-self: flex-start;
+	position: relative;
+	top: 40px;
+	right: 20px;
 }
 .product .fa-heart-o {
 	font-size: 25px;
@@ -735,6 +737,7 @@ section.main-page {
 }
 .footer-icons-expand h2 {
 	/*height: 10vh;*/
+	height: 60px;
 	background-color: rgba(234,234,234,1.0);
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	padding: 5px;
@@ -757,7 +760,7 @@ section.main-page {
 	        align-items: center;
 }
 .footer-icons-expand .format {
-	height: 100%;
+	height: 80vh;
 	background-color: rgba(234,234,234,1.0);
 	width: 100%;
 	oveflow: hidden;
@@ -782,7 +785,7 @@ section.main-page {
 	font-size: 20px;
 	position: relative;
 	top: -35px;
-	right: 30px;
+	right: 70px;
 	-ms-flex-item-align: end;
 	    align-self: flex-end;
 	cursor: pointer;
@@ -861,7 +864,7 @@ section.main-page {
 }
 .wishlist-product img {
 	/*height: 8vh;*/
-	height: 20px;
+	height: 40px;
 }
 /*PROFILE*/
 .profile-wrap {
@@ -967,6 +970,7 @@ section.main-page {
 	padding: 10px;
 	border-right: 2px solid rgba(0,0,0,0.1);
 	cursor: pointer;
+	z-index: 3;
 }
 .foot-wrap i:nth-child(5) {
 	border-right: none;
