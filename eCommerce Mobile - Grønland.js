@@ -3,16 +3,16 @@
 	const loadScreen = document.querySelector('.load-screen');
 	const mainPage = document.querySelector('.main-page');
 	let loading = 0;
-	const id = setInterval(frame, 100); 
+	const id = setInterval(frame, 50); 
 
 	function frame() {
-		if (loading === 100) {
+		if (loading === 50) {
 			clearInterval(id);
 			loadScreen.style.display = 'none';
 			mainPage.style.display = 'grid'
 		} else {
 			loading += 1;
-			if (loading === 97) {
+			if (loading === 47) {
 				loadScreen.style.animation = 'fadeout 1s ease'
 			}
 		}
@@ -27,17 +27,20 @@ const recommendations = document.querySelector('.recommendations');
 //const topOfBar = (blackBar.offsetTop - phoneBar.offsetHeight); 
 const heroImage = document.querySelector('.hero-img'); 
 const footerIconsExpand = document.querySelector('.footer-icons-expand');
+const footerBar = document.querySelector('footer')
 
 function fixNav() {
 	//const topOfBar = (blackBar.offsetTop -  phoneBar.offsetHeight);
 	const bottomOfImage = (heroImage.offsetHeight - phoneBar.offsetHeight);
 	//console.log(window.scrollY, bottomOfImage);
-	if (window.scrollY >= bottomOfImage) {
+	if (window.scrollY >= bottomOfImage) { 
 		mainPage.style.gridTemplate = '[hero] 90vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr';
 		blackBar.classList.add('black-bar-fixed');
 		phoneBar.style.backgroundColor = 'rgba(0,0,0,1.0)';
 		recommendations.style.paddingTop = blackBar.offsetHeight + 'px';
 		footerIconsExpand.style.paddingTop = blackBar.offsetHeight + 'px';
+		footerBar.style.display = '';
+
 	} 
 	if (window.scrollY <= bottomOfImage) { 
 		mainPage.style.gridTemplate = '';
@@ -45,6 +48,7 @@ function fixNav() {
 		phoneBar.style.backgroundColor = '' 
 		recommendations.style.paddingTop = '';
 		footerIconsExpand.style.paddingTop = '';
+		footerBar.style.display = 'none'
 	}
 
 }
@@ -181,7 +185,7 @@ const footHome = document.querySelector('.foot-home');
 function displayHome() {
 	this.style.color = 'rgba(0,0,0,1.0)';
 	mainPage.style.display = 'grid';
-	mainPage.style.flexDirection = 'none';
+	mainPage.style.flexDirection = 'none'; 
 	mainPage.style.gridTemplate = '[hero] 90vh [black-bar] 10vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr';
 	footerIconsExpand.style.display = 'none';
 	recommendations.style.display = '';
@@ -196,6 +200,7 @@ function displaySearch() {
 	mainPage.style.display = 'flex';
 	mainPage.style.flexDirection = 'column';
 	mainPage.style.gridTemplate = 'none';
+	heroImage.style.display = 'none'; //////////////////
 	footerIconsExpand.style.display = 'flex';
 	recommendations.style.display = 'none';
 	otherProducts.style.display = 'none';
@@ -220,6 +225,7 @@ function displayCart() {
 	mainPage.style.display = 'flex';
 	mainPage.style.flexDirection = 'column';
 	mainPage.style.gridTemplate = 'none';
+	heroImage.style.display = 'none';
 	footerIconsExpand.style.display = 'flex';
 	recommendations.style.display = 'none';
 	otherProducts.style.display = 'none';
@@ -243,6 +249,7 @@ function displayFavorites() {
 	mainPage.style.display = 'flex';
 	mainPage.style.flexDirection = 'column';
 	mainPage.style.gridTemplate = 'none';
+	heroImage.style.display = 'none';
 	footerIconsExpand.style.display = 'flex';
 	recommendations.style.display = 'none';
 	otherProducts.style.display = 'none';
@@ -275,6 +282,7 @@ function displayProfile() {
 	mainPage.style.display = 'flex';
 	mainPage.style.flexDirection = 'column';
 	mainPage.style.gridTemplate = 'none';
+	heroImage.style.display = 'none';
 	footerIconsExpand.style.display = 'flex';
 	recommendations.style.display = 'none';
 	otherProducts.style.display = 'none';
