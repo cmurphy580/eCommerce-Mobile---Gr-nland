@@ -33,6 +33,7 @@ body {
 	background-color: rgba(0,0,0,0.3);
 	z-index: 3;
 	position: fixed;
+	padding: 3px 0 3px 0;
 }
 .left-header {
 	float: left;
@@ -218,10 +219,10 @@ section.main-page {
 	left: 0;
 	width: 100%;
 	display: none;
-	grid-template: [hero] 90vh [black-bar] 10vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr;
+	grid-template: [hero] 100vh [black-bar] 50px [recommendations] auto [other-products] 50vh [trips] 70vh [footer] 10vh / 1fr;
 	/*grid-template: [hero] 500px [black-bar] 50px [recommendations] auto [other-products] 200px [trips] 200px [footer] 50px / 1fr;*/
 	font-family: 'Rubik', sans-serif;
-	z-index: -1;
+	z-index: 0;
 }
 .main-page-other {
 	dislay: flex;
@@ -323,7 +324,7 @@ section.main-page {
 	    -ms-flex-align: center;
 	        align-items: center;
 	font-family: 'Merriweather', serif;
-	z-index: 4;
+	z-index: 3;
 	overflow: hidden;
 	min-height: 50px;
 }
@@ -474,7 +475,7 @@ section.main-page {
 	background-color: rgba(255,255,255,1.0);
 }
 .for-heart {
-	z-index: 1;
+	/*z-index: 1;*/
 	-ms-flex-item-align: start;
 	    align-self: flex-start;
 	position: relative;
@@ -488,7 +489,7 @@ section.main-page {
 	cursor: pointer;
 	margin: 0 0 0 0;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 }
 .product .fa-heart {
 	font-size: 25px;
@@ -497,7 +498,7 @@ section.main-page {
 	cursor: pointer;
 	margin: 0 0 0 0;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	text-shadow: 0px 0px 0px 2px rgba(0,0,0,0.75);
 }
 .fa-angle-left {
@@ -629,7 +630,7 @@ section.main-page {
 .other-products {
 	background-color: rgba(255,255,255,1.0);
 	border: 5px solid rgba(254,50,50,1.0);
-	/*height: 50vh;*/
+	height: 50vh;
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -672,7 +673,7 @@ section.main-page {
 .trips {
 	background-image: url('gronland expedition.jpg');
 	background-size: cover;
-	/*height: 50vh;*/
+	height: 70vh;
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -731,6 +732,7 @@ section.main-page {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	/*height: 100vh;*/
+	height: 100%;
 	background-color: rgba(234,234,234,1.0);
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
@@ -803,6 +805,7 @@ section.main-page {
 }
 /*CART*/
 .cart-items-dropdown {
+	height: 100%;
 	margin: 10px 0 0 0;
 	padding: 0 0 0 0;
 }
@@ -826,6 +829,7 @@ section.main-page {
 }
 /*WISHLIST*/
 .wishlist {
+	height: 100%;
 	margin: 10px 0 0 0;
 	padding: 0 0 0 0;
 }
@@ -868,6 +872,8 @@ section.main-page {
 }
 /*PROFILE*/
 .profile-wrap {
+	overflow-y: scroll;
+	min-height: auto;
 	margin: 10px 0 0 0;
 	padding: 0 0 0 0;
 	display: -webkit-box;
@@ -890,13 +896,13 @@ section.main-page {
 	border-bottom: none;
 	color: rgba(0,0,0,0.9);
 	width: 100vw;
-	margin: 10px 0 0 0;
-	padding: 0 0 0 0;
+	margin: 10px 0 20px 0;
+	padding: 0 0 20px 0;
 }
 .profile-pic {
 	background-image: url('person pic.jpg');
 	background-size: cover;
-	height: 150px;
+	min-height: 150px;
 	width: 150px;
 	border-radius: 50%;
 	-ms-flex-item-align: center;
@@ -919,8 +925,9 @@ section.main-page {
 	    -ms-flex-align: start;
 	        align-items: flex-start;
 	margin: 10px 0 0 0;
-	padding: 0 0 0 0;
+	padding: 0 0 20px 0;
 	width: 90vw;
+	min-height: auto;
 }
 .profile-text {
 	font-size: 14px;
@@ -933,7 +940,7 @@ section.main-page {
 	background-color: rgba(234,234,234,1.0);
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
+	display: none;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: row;
@@ -943,7 +950,7 @@ section.main-page {
 	-webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
 	        box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
 	/*height: 10vh;*/
-	z-index: 2;
+	/*z-index: ;*/
 	position: fixed;
 	bottom: 0;
 }
