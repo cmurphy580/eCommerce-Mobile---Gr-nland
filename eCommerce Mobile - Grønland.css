@@ -219,7 +219,7 @@ section.main-page {
 	left: 0;
 	width: 100%;
 	display: none;
-	grid-template: [hero] 100vh [black-bar] 50px [recommendations] auto [other-products] 50vh [trips] 70vh [footer] 10vh / 1fr;
+	grid-template: [hero] 90vh [black-bar] 60px [recommendations] auto [other-products] 50vh [trips] 60vh [footer] 10vh / 1fr;
 	/*grid-template: [hero] 500px [black-bar] 50px [recommendations] auto [other-products] 200px [trips] 200px [footer] 50px / 1fr;*/
 	font-family: 'Rubik', sans-serif;
 	z-index: 0;
@@ -673,7 +673,7 @@ section.main-page {
 .trips {
 	background-image: url('gronland expedition.jpg');
 	background-size: cover;
-	height: 70vh;
+	height: 60vh;
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -940,7 +940,7 @@ section.main-page {
 	background-color: rgba(234,234,234,1.0);
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: none;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: row;
