@@ -27,14 +27,14 @@ const recommendations = document.querySelector('.recommendations');
 //const topOfBar = (blackBar.offsetTop - phoneBar.offsetHeight); 
 const heroImage = document.querySelector('.hero-img'); 
 const footerIconsExpand = document.querySelector('.footer-icons-expand');
-const footerBar = document.querySelector('.foot-wrap')
+const footerBar = document.querySelector('.footer-wrap')
 
 function fixNav() {
 	//const topOfBar = (blackBar.offsetTop -  phoneBar.offsetHeight);
 	const bottomOfImage = (heroImage.offsetHeight - phoneBar.offsetHeight);
 	//console.log(window.scrollY, bottomOfImage);
 	if (window.scrollY >= bottomOfImage) { 
-		mainPage.style.gridTemplate = '[hero] 90vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr';
+		mainPage.style.gridTemplate = '[hero] 90vh [recommendations] auto [other-products] 50vh [trips] 5vh [footer] 10vh / 1fr';
 		blackBar.classList.add('black-bar-fixed');
 		phoneBar.style.backgroundColor = 'rgba(0,0,0,1.0)';
 		recommendations.style.paddingTop = blackBar.offsetHeight + 'px';
@@ -48,7 +48,7 @@ function fixNav() {
 		phoneBar.style.backgroundColor = '' 
 		recommendations.style.paddingTop = '';
 		footerIconsExpand.style.paddingTop = '';
-		//footerBar.style.display = ''
+		//footerBar.style.display = '';
 	}
 
 }
@@ -183,10 +183,11 @@ const footerExpandFormat = document.querySelector('.format')
 
 const footHome = document.querySelector('.foot-home');
 function displayHome() {
+	heroImage.style.display = '';
 	this.style.color = 'rgba(0,0,0,1.0)';
 	mainPage.style.display = 'grid';
 	mainPage.style.flexDirection = 'none'; 
-	mainPage.style.gridTemplate = '[hero] 90vh [black-bar] 10vh [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr';
+	mainPage.style.gridTemplate = '[hero] 90vh [black-bar] 60px [recommendations] auto [other-products] 50vh [trips] 50vh [footer] 10vh / 1fr';
 	footerIconsExpand.style.display = 'none';
 	recommendations.style.display = '';
 	otherProducts.style.display = '';
