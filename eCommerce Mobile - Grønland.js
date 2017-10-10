@@ -27,7 +27,7 @@ const recommendations = document.querySelector('.recommendations');
 //const topOfBar = (blackBar.offsetTop - phoneBar.offsetHeight); 
 const heroImage = document.querySelector('.hero-img'); 
 const footerIconsExpand = document.querySelector('.footer-icons-expand');
-const footerBar = document.querySelector('footer')
+const footerBar = document.querySelector('.foot-wrap')
 
 function fixNav() {
 	//const topOfBar = (blackBar.offsetTop -  phoneBar.offsetHeight);
@@ -39,7 +39,7 @@ function fixNav() {
 		phoneBar.style.backgroundColor = 'rgba(0,0,0,1.0)';
 		recommendations.style.paddingTop = blackBar.offsetHeight + 'px';
 		footerIconsExpand.style.paddingTop = blackBar.offsetHeight + 'px';
-		footerBar.style.display = '';
+		//footerBar.style.display = 'flex';
 
 	} 
 	if (window.scrollY <= bottomOfImage) { 
@@ -48,7 +48,7 @@ function fixNav() {
 		phoneBar.style.backgroundColor = '' 
 		recommendations.style.paddingTop = '';
 		footerIconsExpand.style.paddingTop = '';
-		footerBar.style.display = 'none'
+		//footerBar.style.display = ''
 	}
 
 }
